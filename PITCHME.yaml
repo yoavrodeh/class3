@@ -13,7 +13,7 @@ highlight: agate
 
 
 # theme-background : [ "white" ]
-# theme-headline : [ "Prompt", "black", "uppercase", "black", "100", "100", "15" ]
+# theme-headline : [ "Prompt", "black", "uppercase", "black", "90", "100", "15" ]
 # theme-byline   : [ "Montserrat", "black", "uppercase", "black", "100", "100", "15" ]
 # theme-text     : [ "Open Sans", "Black", "none", "Black", "100", "100", "15" ]
 # theme-links    : [ "black", "black" ]
