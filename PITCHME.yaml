@@ -3,7 +3,7 @@ theme-code     : [ "Source Code Pro", "120", "100" ]
 theme-margins    : [ "0", "15px" ]
 
 theme-background : [ "radial-gradient(white, rgb(247, 242, 211))" ]
-theme-headline : [ "Prompt", "Brown", "uppercase", "Brown", "100", "100", "15" ]
+theme-headline : [ "Prompt", "Brown", "uppercase", "Brown", "90", "100", "15" ]
 theme-byline   : [ "Montserrat", "Brown", "uppercase", "Brown", "100", "100", "15" ]
 theme-text     : [ "Open Sans", "Black", "none", "Black", "100", "100", "15" ]
 theme-links    : [ "#5289F7", "#5254F7" ]

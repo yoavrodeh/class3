@@ -1,5 +1,4 @@
 # Inheritance
-
 ## sub & super classes
 
 
@@ -20,7 +19,7 @@
 
 
 ---
-![](class3/resources/umlExample.png)
+![](resources/umlExample.png)
 
 A UML diagram demonstrating inheritance.
 
@@ -36,21 +35,21 @@ A UML diagram demonstrating inheritance.
 
 
 ---
-@code[java code-max code-noblend](class3/src/Bicycle.java)
+@code[java code-max code-noblend](src/Bicycle.java)
 A simple class.
 
 ---
-@code[java code-max code-noblend](class3/src/MountainBike.java)
+@code[java code-max code-noblend](src/MountainBike.java)
 We can think of `MountainBike` as having all the code of `Bicycle` for free.
 
 
 ---
 ### UML diagram
-@img[span-75](class3/resources/bikes.png)
+@img[span-75](resources/bikes.png)
 
 
 ---
-@code[java code-max code-noblend](class3/src/MainForMountainBike.java)
+@code[java code-max code-noblend](src/MainForMountainBike.java)
 It works!
 
 But why does `MountainBike` use `getSpeed()` and not directly use `speed`?
@@ -72,7 +71,7 @@ Recall the access rules for class members,
 
 ---
 A simple `Employee` class. 
-@code[java code-max code-noblend](class3/src/Employee.java)
+@code[java code-max code-noblend](src/Employee.java)
 @[1-12](Notice that `monthlySalary` is protected.)
 @[14-18]
 
@@ -88,14 +87,14 @@ We can write a new class, but this will duplicate a lot of code.
 
 
 ---
-@code[java code-max code-noblend](class3/src/CommissionEmployee.java)
+@code[java code-max code-noblend](src/CommissionEmployee.java)
 @[1-13](Use `super` to call a constructor of the superclass.) 
 @[15-19](Overriding a method.)
 
 
 
 ---
-@img[span-75](class3/resources/employees.png)
+@img[span-75](resources/employees.png)
 
 Note how we denote `private`, `public` and `protected` members.
 
@@ -171,7 +170,7 @@ Later, we will want to subclass it, and encounter some problems...
 Let's first see how we use it:
 
 ---
-@code[java code-max code-noblend](class3/src/MainForSortedArray1.java)
+@code[java code-max code-noblend](src/MainForSortedArray1.java)
 
 
 We will use **insertion sort**, which is considered the
@@ -186,7 +185,7 @@ for many recursive sorting algorithms.
 
 
 ---
-@code[java code-max code-noblend](class3/src/SortedArray1.java)
+@code[java code-max code-noblend](src/SortedArray1.java)
 @[1-10](Constructor just copies the array.)
 @[12-19](Insertion sort.)
 @[21-24](recall the static method `toString` of class `Arrays`.)
@@ -202,7 +201,7 @@ For that we will define `NamedSortedArray`, which is a subclass of `SortedArray`
 
 
 ---
-@code[java code-max code-noblend](class3/src/MainForNamedSortedArray.java)
+@code[java code-max code-noblend](src/MainForNamedSortedArray.java)
 
 Sorting is done according to the numbers, and the strings follow the same new ordering.
 
@@ -219,7 +218,7 @@ Sorting is done according to the numbers, and the strings follow the same new or
 
 
 ---
-@img[span-75](class3/resources/arrays.png)
+@img[span-75](resources/arrays.png)
 
 Change `SortedArray` by **extracting** from `sort` the method `swap`,
 and then we only need to override `swap`!
@@ -227,13 +226,13 @@ and then we only need to override `swap`!
 
 
 ---
-@code[java code-max code-noblend](class3/src/SortedArray.java)
+@code[java code-max code-noblend](src/SortedArray.java)
 @[12-22](Note that `swap` is `protected`. We don't really want it to be `public`, yet we need to override it.)
 
 
 
 ---
-@code[java code-max code-noblend](class3/src/NamedSortedArray.java)
+@code[java code-max code-noblend](src/NamedSortedArray.java)
 @[1-11](`super` constructor takes care of the numbers.)
 @[13-19](Overriding `swap`.)
 @[21-25](Why do we write `@Override` above `toString`?)
@@ -274,25 +273,25 @@ The problem is `a` is private. Two solutions:
 
 
 ---
-@code[java code-max code-noblend](class3/src/SortedArray2.java)
+@code[java code-max code-noblend](src/SortedArray2.java)
 @[12-22]
 The new methods are set to be `protected`. Setting it to `public` would be too much: always prefer a stricter access modifier.
 
 
 
 ---
-@code[java code-max code-noblend](class3/src/AugmentedArray.java)
+@code[java code-max code-noblend](src/AugmentedArray.java)
 Access to the superclass's protected methods is simple.
 
 
 ---
-@code[java code-max code-noblend](class3/src/MainForAugmentedArray.java)
+@code[java code-max code-noblend](src/MainForAugmentedArray.java)
 
 
 ---
 ### Question (from a test)
 `Node` is used in a linked list of priced items:
-@code[java code-max code-noblend](class3/src/Node.java)
+@code[java code-max code-noblend](src/Node.java)
 @[1-11](How would you write a `getTotalCost` method?)
 @[13-16](Note that we call `getCost` and do not recalculate.)
 
@@ -302,7 +301,7 @@ Access to the superclass's protected methods is simple.
 Write a subclass of `Node` called `Node2`, where each item also has an integer quantity. Make sure that `getCost` and `getTotalCost` work well.
 
 ---
-@code[java code-max code-noblend](class3/src/Node2.java)
+@code[java code-max code-noblend](src/Node2.java)
 What about `getTotalCost`? 
 @css[fragment](*no need to change it from what we inherit!*)
 
@@ -375,14 +374,14 @@ The following example is very important.
 
   
 ---
-@code[java code-max code-noblend](class3/src/HashTable.java)
+@code[java code-max code-noblend](src/HashTable.java)
 @[1-6](For simplicity we make it of a fixed size.)
 @[8-18](Either finds the string, or an empty place where it could have been.)
 @[20-26](These are very simple now.)
   
   
 ---
-@code[java code-max code-noblend](class3/src/MainForHashTable.java)
+@code[java code-max code-noblend](src/MainForHashTable.java)
 A hash table is efficient for saving a set (of strings in this case).
 
 
@@ -396,12 +395,12 @@ It will be best to explain what it is good for by showing how we can use it:
 
 
 ---
-@code[java code-max code-noblend](class3/src/MainForHashMap.java)
+@code[java code-max code-noblend](src/MainForHashMap.java)
 Maps are sometimes called dictionaries.
 
 
 ---
-@code[java code-max code-noblend](class3/src/HashMap.java)
+@code[java code-max code-noblend](src/HashMap.java)
 @[1-7]
 @[9-22]
  
