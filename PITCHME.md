@@ -364,7 +364,7 @@ static variables and methods are not overridden, but hidden.
 ### Hash tables and Hash maps.
 
 The following example is very important.
-+ It also shows a simple example of inheritance...
++ It also shows a simple example of inheritance.
 + Java has very good support for using hash tables.
   + We will learn more about it later.
 + For example, `String` has a method `hashCode()`, which returns
