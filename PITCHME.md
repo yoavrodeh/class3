@@ -385,7 +385,7 @@ Maps are sometimes called dictionaries.
 ---
 @code[java code-max code-noblend](src/HashMap.java)
 @[1-7]
-@[9-22]
+@[9-18]
  
 
 ---

@@ -13,10 +13,6 @@ public class HashMap extends HashTable {
 	}
 
 	public String get(String key) {
-		int i = indexOf(key);
-		if (table[i] == null)
-			return null;
-		else
-			return values[i];
+		return values[indexOf(key)];
 	}
 }
